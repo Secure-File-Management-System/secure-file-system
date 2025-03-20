@@ -1,0 +1,26 @@
+{
+    "C_Cpp.errorSquiggles": "enabled"
+}
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/user",
+                "${workspaceFolder}/include/file",
+                "${workspaceFolder}/include/security",
+                "${workspaceFolder}/include/concurrency",
+                "${workspaceFolder}/include/network",
+                "/usr/include",
+                "/usr/local/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
