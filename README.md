@@ -1,6 +1,6 @@
 # Secure File Management System (BCSE 1203)
 
-### ✅ Bare Minimum Feature Checklist
+### Feature Checklist
 
 - [x] Git version control and collaboration (branches, commits, merges)
 - [x] User authentication with password hashing (SHA-256)
@@ -12,7 +12,3 @@
 - [x] Organized modular structure
 - [x] Unit test file included for user auth
 
-### How to Build
-```bash
-make
-./build/main
