@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "../include/user/auth.h"
+#include "../include/security/logging.h"
 
 int main() {
     char username[50], password[50];
