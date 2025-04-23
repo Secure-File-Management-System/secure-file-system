@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "encryption.h"
+#include "../../include/security/encryption.h"
 
 void xor_encrypt_decrypt(char *data, size_t len, const char *key) {
     size_t key_len = strlen(key);
