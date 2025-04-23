@@ -21,6 +21,7 @@ int main() {
     char username[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
 
+<<<<<<< HEAD
     load_files_metadata();
 
     while (1) {
@@ -36,6 +37,21 @@ int main() {
                 fgets(username, sizeof(username), stdin);
                 username[strcspn(username, "\n")] = 0;
 
+=======
+    while (1) {
+        show_welcome_page();
+        printf("\n1. Login\n2. Register\n3. View Audit Log\n4. Exit\n");
+        printf("Choose an option: ");
+        scanf("%d", &choice);
+        getchar(); // consume newline
+
+        switch (choice) {
+            case 1:
+                printf("Enter username: ");
+                fgets(username, sizeof(username), stdin);
+                username[strcspn(username, "\n")] = 0;
+
+>>>>>>> 3ad65e5 (updated system)
                 printf("Enter password: ");
                 fgets(password, sizeof(password), stdin);
                 password[strcspn(password, "\n")] = 0;
@@ -64,7 +80,11 @@ int main() {
                 fgets(password, sizeof(password), stdin);
                 password[strcspn(password, "\n")] = 0;
 
+<<<<<<< HEAD
                 register_user(); 
+=======
+                register_user();  // Uses interactive function in auth.c
+>>>>>>> 3ad65e5 (updated system)
                 break;
 
             case 3:

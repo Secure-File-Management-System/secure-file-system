@@ -203,6 +203,7 @@ int update_password_hash(const char *username, const char *new_password) {
     fclose(file);
     printf("User not found: %s\n", username);
     return 0;  // User not found
+<<<<<<< HEAD
 }
 
 int update_user_password(const char *username, const char *new_password) {
@@ -247,3 +248,6 @@ int update_user_password(const char *username, const char *new_password) {
     return 0;  // User not found
 }
 
+=======
+}
+>>>>>>> 3ad65e5 (updated system)
