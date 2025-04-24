@@ -138,7 +138,7 @@ void show_security_settings_menu(const char *username) {
         printf("--------------------------------------------------\n");
         printf("1. Change Password\n");
         printf("2. View Audit Logs\n");
-        printf("3. Enable/Disable 2FA (if implemented)\n");
+        printf("3. Enable/Disable 2FA \n");
         printf("4. Back to Main Menu\n");
         printf("--------------------------------------------------\n");
         printf("Enter your choice: ");

@@ -21,6 +21,8 @@ int main() {
     char username[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
 
+    load_files_metadata();
+
     while (1) {
         show_welcome_page();
         printf("\n1. Login\n2. Register\n3. View Audit Log\n4. Exit\n");
@@ -62,7 +64,7 @@ int main() {
                 fgets(password, sizeof(password), stdin);
                 password[strcspn(password, "\n")] = 0;
 
-                register_user();  // Uses interactive function in auth.c
+                register_user(); 
                 break;
 
             case 3:
