@@ -204,3 +204,46 @@ int update_password_hash(const char *username, const char *new_password) {
     printf("User not found: %s\n", username);
     return 0;  // User not found
 }
+
+int update_user_password(const char *username, const char *new_password) {
+    FILE *file = fopen(USER_DB_FILE, "r+");
+    if (!file) {
+        printf("Error: Unable to open user database file.\n");
+        return 0;
+    }
+
+    char line[MAX_LINE];
+    long pos;
+    char stored_username[MAX_USERNAME_LEN];
+    char stored_password[HASH_LEN];
+    int user_found = 0;
+
+    // Read the file line by line
+    while (fgets(line, sizeof(line), file)) {
+        pos = ftell(file);
+        sscanf(line, "%s %s", stored_username, stored_password);
+
+        if (strcmp(stored_username, username) == 0) {
+            // Hash the new password
+            char new_hashed_password[HASH_LEN];
+            hash_password(new_password, new_hashed_password);
+
+            // Go back to the position of the user's entry
+            fseek(file, pos - strlen(line), SEEK_SET);
+
+            // Rewrite the user's password
+            fprintf(file, "%s %s\n", stored_username, new_hashed_password);
+
+            fflush(file);  // Make sure the changes are written
+            fclose(file);
+
+            printf("Password updated successfully for user: %s\n", username);
+            return 1;  // Password successfully updated
+        }
+    }
+
+    fclose(file);
+    printf("User not found: %s\n", username);
+    return 0;  // User not found
+}
+
