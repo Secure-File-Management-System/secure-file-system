@@ -22,6 +22,9 @@ int main() {
     char password[MAX_PASSWORD_LENGTH];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0c670fe (complete working system)
     load_files_metadata();
 
     while (1) {
@@ -81,10 +84,14 @@ int main() {
                 password[strcspn(password, "\n")] = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 register_user(); 
 =======
                 register_user();  // Uses interactive function in auth.c
 >>>>>>> 3ad65e5 (updated system)
+=======
+                register_user(); 
+>>>>>>> 0c670fe (complete working system)
                 break;
 
             case 3:
