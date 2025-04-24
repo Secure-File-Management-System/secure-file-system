@@ -3,6 +3,9 @@
 
 // Function prototypes for user authentication
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9a12521 (full system Updated)
 void login_user();  // Function for user login
 void register_user();  // Function for user registration
 int validate_user_credentials(const char *username, const char *password);  // Validates user credentials
@@ -13,6 +16,7 @@ int update_password_hash(const char *username, const char *new_password);  // Up
 int validate_password(const char *password);  // Validates the password (e.g., length, complexity)
 int update_user_password(const char *username, const char *new_password);  // Updates the user's password
 int validate_current_password(const char *username, const char *current_password);
+<<<<<<< HEAD
 =======
 void login_user();
 void register_user();
@@ -23,5 +27,7 @@ int is_user_exists(const char *username);
 int update_password_hash(const char *username, const char *new_password); 
 int validate_password(const char *password);  // Only need to validate the password itself, not the username
 >>>>>>> 3ad65e5 (updated system)
+=======
+>>>>>>> 9a12521 (full system Updated)
 
 #endif // AUTH_H
