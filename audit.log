@@ -90,3 +90,5 @@
 [Thu Apr 24 22:14:10 2025] wes performed 'Downloaded file' on 'testfile3.txt'
 [Thu Apr 24 22:15:28 2025] wes performed 'Deleted file' on 'testfile3.txt'
 [Thu Apr 24 22:17:01 2025] wes performed 'Session ended' on 'system'
+[Thu Apr 24 23:24:10 2025] wes performed 'Session started' on 'system'
+[Thu Apr 24 23:24:10 2025] wes performed 'Login successful' on 'system'
